@@ -5,7 +5,7 @@ import java.io.IOException;
 public class FileReaderDemo {
 	public static void main(String[] args) {
 
-		String path = "/Volumes/KB/Dump/song.txt";
+		String path = "src/Copy.java";
 		BufferedReader reader = null;
 		String line = null;
 

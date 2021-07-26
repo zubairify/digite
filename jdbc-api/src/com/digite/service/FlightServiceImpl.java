@@ -14,6 +14,10 @@ public class FlightServiceImpl implements FlightService {
 		dao = new FlightDaoImpl();
 	}
 
+	public FlightServiceImpl(FlightDao dao) {
+		this.dao = dao;
+	}
+	
 	@Override
 	public void save(Flight flight) {
 		try {
