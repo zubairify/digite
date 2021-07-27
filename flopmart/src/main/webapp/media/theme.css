@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.banner {
+	font: 36pt Garamond;
+	background: #ff74ca;
+	color: aquamarine;
+}
+
+.punch {
+	font: 14pt verdana;
+	background: aquamarine;
+	color: midnightblue;
+}
+
+.title {
+	font:28pt Garamond;
+	color:orange;
+}
+
+td {
+	font: 10pt verdana;
+	color: olive;
+}
+
+a {
+	font: 12pt verdana;
+	color: orange;
+	text-decoration: none;
+}
+
+a:hover {
+	background: orange;
+	color: white;
+}
+
+input[name] {
+	border: none;
+	border-bottom: 1pt solid olive;
+	font: 12pt verdana;
+	color: orange;
+}
+
+input[type="submit"] {
+	width:100pt;
+	font: 12pt verdana;
+	background: olive;
+	color: white;
+}
+
+.footer {
+	font: 10pt verdana;
+	color: orange;
+}
