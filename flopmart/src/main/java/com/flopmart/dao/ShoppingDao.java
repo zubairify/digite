@@ -11,7 +11,7 @@ public interface ShoppingDao {
 
 	boolean persist(RegisterBean user) throws SQLException;
 	
-	String validate(LoginBean login) throws SQLException;
+	RegisterBean validate(LoginBean login) throws SQLException;
 	
 	ProductBean fetchProduct(int code) throws SQLException;
 	

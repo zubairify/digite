@@ -30,7 +30,7 @@ public class ShoppingServiceImpl implements ShoppingService {
 	}
 
 	@Override
-	public String authenticate(LoginBean login) {
+	public RegisterBean authenticate(LoginBean login) {
 		login.setPassword(FlopEncoder.encode(login.getPassword()));
 		try {
 			return dao.validate(login);

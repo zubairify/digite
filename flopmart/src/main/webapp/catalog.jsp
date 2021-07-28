@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="banner.jsp" />
 <h1>Welcome to Product Catalogue</h1>
 <% List<ProductBean> catalog = (List<ProductBean>) request.getAttribute("CATALOG"); %>
 <table border="2">

@@ -39,20 +39,27 @@ public class ShoppingDaoImpl implements ShoppingDao {
 	}
 
 	@Override
-	public String validate(LoginBean login) throws SQLException {
-		String sql = "select name from users where email=? and password=?";
+	public RegisterBean validate(LoginBean login) throws SQLException {
+		String sql = "select * from users where email=? and password=?";
 		Connection conn = null;
-		
+		RegisterBean user = null;
 		try {
 			conn = JdbcFactory.getConnection();
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1, login.getEmail());
 			stmt.setString(2, login.getPassword());
 			ResultSet rs = stmt.executeQuery();
-			if (rs.next())
-				return rs.getString(1);
-			else
-				return null;
+			if (rs.next()) {
+				user = new RegisterBean();
+				user.setEmail(rs.getString(1));
+				user.setPassword(rs.getString(2));
+				user.setName(rs.getString(3));
+				user.setAge(rs.getInt(4));
+				user.setGender(rs.getString(5));
+				user.setCity(rs.getString(6));
+				user.setMobile(rs.getString(7));
+			}
+			return user;
 		} finally {
 			conn.close();
 		}

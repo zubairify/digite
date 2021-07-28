@@ -10,7 +10,7 @@ public interface ShoppingService {
 	
 	boolean addUser(RegisterBean user);
 	
-	String authenticate(LoginBean login);
+	RegisterBean authenticate(LoginBean login);
 	
 	ProductBean getProduct(int code);
 	
