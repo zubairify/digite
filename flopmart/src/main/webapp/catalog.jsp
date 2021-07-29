@@ -16,7 +16,7 @@
 <tr><th>Code</th><th>Name</th><th>Price</th><th>Stock</th><th>Image</th><th>Action</th></tr>
 	<% for(ProductBean p : catalog) { %>
 		<tr>
-			<td><%=p.getCode() %></td>
+			<td>${p.code}</td>
 			<td><%=p.getName() %></td>
 			<td><%=p.getPrice() %></td>
 			<td><%=p.getStock() %></td>

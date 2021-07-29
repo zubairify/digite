@@ -14,7 +14,7 @@ import com.flopmart.bean.ProductBean;
 import com.flopmart.service.ShoppingService;
 import com.flopmart.service.ShoppingServiceImpl;
 
-@WebServlet(name = "/Checkout", urlPatterns = {"/Checkout.fm"})
+@WebServlet(name = "Checkout", urlPatterns = {"/Checkout.fm"})
 public class CheckoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private ShoppingService service;
